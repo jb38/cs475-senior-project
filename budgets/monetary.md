@@ -1,4 +1,4 @@
-## With Soldering
+### With Soldering
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
 |---|--:|--:|--:|--:|--:|---|
 |Arduino Uno R3|1|$15.95|$15.95|1|$15.95|http://www.amazon.com/dp/B00CW3R0BA|
@@ -13,7 +13,7 @@
 |Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
 |||||Cost per|$57.72|with Bluetooth: $63.60|
 
-## Without Soldering
+### Without Soldering
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
 |---|--:|--:|--:|--:|--:|---|
 |Arduino Uno R3|1|$15.95|$15.95|1|$15.95|http://www.amazon.com/dp/B00CW3R0BA|
@@ -31,7 +31,7 @@
 |Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
 |||||Cost per|$75.70|with Bluetooth: $81.59|
 
-## Bluetooth Add-on
+### Bluetooth Add-on
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
 |---|--:|--:|--:|--:|--:|---|
 |Bluetooth Transceiver Module|1|$5.49|$5.49|1|$5.49|http://www.newegg.com/Product/Product.aspx?Item=9SIA2C50Y31529|
