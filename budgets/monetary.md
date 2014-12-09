@@ -11,7 +11,7 @@
 |9v Battery|12|$16.10|$1.34|1|$1.34|http://www.amazon.com/dp/B002UGVWA4|
 |SD Card|10|$42.95|$4.30|1|$4.30|http://www.amazon.com/dp/B00JYE81M2|
 |Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
-|||||Cost per|$57.72|with Bluetooth: $63.60|
+|||||**Cost per**|**$57.72**|_with Bluetooth: $63.60_|
 
 ### Without Soldering
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
@@ -29,11 +29,11 @@
 |SD Card|10|$42.95|$4.30|1|$4.30|http://www.amazon.com/dp/B00JYE81M2|
 |Jumper Wires (M/M)|40|$3.95|$0.10|10|$0.99|http://www.adafruit.com/products/758|
 |Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
-|||||Cost per|$75.70|with Bluetooth: $81.59|
+|||||**Cost per**|**$75.70**|_with Bluetooth: $81.59_|
 
 ### Bluetooth Add-on
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
 |---|--:|--:|--:|--:|--:|---|
 |Bluetooth Transceiver Module|1|$5.49|$5.49|1|$5.49|http://www.newegg.com/Product/Product.aspx?Item=9SIA2C50Y31529|
 |Jumper Wires (M/F)|40|$3.95|$0.10|4|$0.40|https://www.adafruit.com/products/826|
-|||||Cost per|$5.89||
+|||||**Cost per**|**$5.89**||
