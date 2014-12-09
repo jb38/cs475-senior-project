@@ -18,7 +18,7 @@
 |---|--:|--:|--:|--:|--:|---|
 |Arduino Uno R3|1|$15.95|$15.95|1|$15.95|http://www.amazon.com/dp/B00CW3R0BA|
 |Waterproof Temperature Sensor|5|$16.95|$3.39|1|$3.39|http://www.amazon.com/dp/B00KUNKR3M|
-|SD Card Shield|1|$13.90|$13.90|1|$13.90|http://www.seeedstudio.com/depot/SD-card-shield-p-492.html|
+|SD Card Shield|1|$13.90|$13.90|1|$13.90|http://www.seeedstudio.com/depot/sd-card-shield-v40-p-1381.html|
 |RTC Module|1|$17.50|$17.50|1|$17.50|http://www.adafruit.com/product/255|
 |Tiny Breadboard|10|$35.60|$3.56|1|$3.56|https://www.sparkfun.com/products/12047|
 |Power Cable (9v to Arduino)|10|$9.89|$0.99|1|$0.99|http://www.amazon.com/dp/B00BVVHCKI|
