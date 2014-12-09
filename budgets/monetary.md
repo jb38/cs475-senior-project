@@ -1,6 +1,6 @@
+## With Soldering
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
 |---|--:|--:|--:|--:|--:|---|
-|With Soldering|||||||
 |Arduino Uno R3|1|$15.95|$15.95|1|$15.95|http://www.amazon.com/dp/B00CW3R0BA|
 |Data-logging Shield w/ RTC|1|$17.96|$17.96|1|$17.96|http://www.adafruit.com/products/1141|
 |Waterproof Temperature Sensor|5|$16.95|$3.39|1|$3.39|http://www.amazon.com/dp/B00KUNKR3M|
@@ -13,6 +13,10 @@
 |Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
 |||||Cost per|$57.72|with Bluetooth: $63.60|
 |Without Soldering|||||||
+
+## Without Soldering
+|Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
+|---|--:|--:|--:|--:|--:|---|
 |Arduino Uno R3|1|$15.95|$15.95|1|$15.95|http://www.amazon.com/dp/B00CW3R0BA|
 |Waterproof Temperature Sensor|5|$16.95|$3.39|1|$3.39|http://www.amazon.com/dp/B00KUNKR3M|
 |SD Card Shield|1|$13.90|$13.90|1|$13.90|http://www.seeedstudio.com/depot/SD-card-shield-p-492.html|
@@ -27,7 +31,10 @@
 |Jumper Wires (M/M)|40|$3.95|$0.10|10|$0.99|http://www.adafruit.com/products/758|
 |Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
 |||||Cost per|$75.70|with Bluetooth: $81.59|
-|Bluetooth Add-on|||||||
+
+## Bluetooth Add-on
+|Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
+|---|--:|--:|--:|--:|--:|---|
 |Bluetooth Transceiver Module|1|$5.49|$5.49|1|$5.49|http://www.newegg.com/Product/Product.aspx?Item=9SIA2C50Y31529|
 |Jumper Wires (M/F)|40|$3.95|$0.10|4|$0.40|https://www.adafruit.com/products/826|
 |||||Cost per|$5.89||
