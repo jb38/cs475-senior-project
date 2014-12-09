@@ -12,7 +12,6 @@
 |SD Card|10|$42.95|$4.30|1|$4.30|http://www.amazon.com/dp/B00JYE81M2|
 |Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
 |||||Cost per|$57.72|with Bluetooth: $63.60|
-|Without Soldering|||||||
 
 ## Without Soldering
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
