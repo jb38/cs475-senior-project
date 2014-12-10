@@ -1,5 +1,5 @@
 # Monetary Budget
-
+## Base System
 ### With Soldering
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
 |---|--:|--:|--:|--:|--:|---|
@@ -33,7 +33,8 @@
 |Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
 |||||**Cost per**|**$75.70**|_with Bluetooth: $81.59_|
 
-### Bluetooth Add-on
+## Add-ons
+### Bluetooth
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
 |---|--:|--:|--:|--:|--:|---|
 |Bluetooth Transceiver Module|1|$5.49|$5.49|1|$5.49|http://www.newegg.com/Product/Product.aspx?Item=9SIA2C50Y31529|
