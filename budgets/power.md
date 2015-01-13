@@ -11,6 +11,8 @@
 |45 min|0.452830mAh|79 days|158 days|165 days|331 days|51 days|
 |60 min|0.452125mAh|79 days|158 days|165 days|331 days|52 days|
 
+![alt text](http://i.imgur.com/f6Sajkc.png "")
+
 Formulae:
 ```
 battery_life    = battery_capacity / average_current
