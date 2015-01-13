@@ -24,7 +24,7 @@ idle_current = 0.45mA
 idle_period  = (interval_min * 60 - busy_period)
 
 average_current = (busy_current * busy_period + idle_current * idle_period) / (busy_period + idle_period)
-average_current = (8.10 * 1 + 0.45 * (interval_min * 60) - 1) / (interval_min * 60)
+                = (8.10 * 1 + 0.45 * (interval_min * 60) - 1) / (interval_min * 60)
 
 battery_life varies about battery_capacity (refer to table above)
 ```
