@@ -14,6 +14,7 @@
 Formulae:
 ```
 battery_life    = battery_capacity / average_current
+
 average_current = (busy_current * busy_period + idle_current * idle_period) / (busy_period + idle_period)
                 = (8.10 * 1 + 0.45 * (interval_min * 60) - 1) / (interval_min * 60)
 ```
