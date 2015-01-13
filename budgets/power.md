@@ -32,8 +32,3 @@ Hours = c / (0.45 * (n * 60 - 1) + 8.10) / (n * 60),
         and n is the logging cadence
 Days = Hours / 24 (rounded)
 ```
-
-```
-Average current = (10mA \* 0.5s + 16uA \* 10s) / 10.5s = 0.49mA
-Battery time = 450mAh/0.49mA = 918 hrs = at least 38 days
-```
