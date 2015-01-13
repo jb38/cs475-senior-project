@@ -3,6 +3,7 @@
 1.5v AAA Alkaline = 860mAh  
 1.5v AA  Alkaline = 1800mAh
 9v 9V Alkaline = 565mAh
+
 |Reading Interval|Average Current|3 x AAA (4.5v, 860mAh)|6 x AAA (4.5v, 1720mAh)|3 x AA (4.5v, 1800mAh)|6 x AA (4.5v, 3600mAh)|1 x 9V (9v, 565mAh)|
 |--:|--:|--:|--:|--:|--:|--:|
 |1 min|0.5775mAh|62 days|124 days|130 days|260 days||
