@@ -11,9 +11,11 @@
 |45 min|0.452830mAh|79 days|158 days|165 days|331 days|51 days|
 |60 min|0.452125mAh|79 days|158 days|165 days|331 days|52 days|
 
-Formula:
+Formulae:
 ```
-battery_life = battery_capacity / average_current
+battery_life    = battery_capacity / average_current
+average_current = (busy_current * busy_period + idle_current * idle_period) / (busy_period + idle_period)
+                = (8.10 * 1 + 0.45 * (interval_min * 60) - 1) / (interval_min * 60)
 ```
 
 Performance:
@@ -22,9 +24,6 @@ busy_current = 8.10mA
 busy_period  = 1s
 idle_current = 0.45mA
 idle_period  = (interval_min * 60 - busy_period)
-
-average_current = (busy_current * busy_period + idle_current * idle_period) / (busy_period + idle_period)
-                = (8.10 * 1 + 0.45 * (interval_min * 60) - 1) / (interval_min * 60)
 
 battery_life varies about battery_capacity (refer to table above)
 ```
