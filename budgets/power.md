@@ -29,6 +29,9 @@ battery_life varies about battery_capacity (refer to table above)
 |45 min|0.452830mAh|79 days|158 days|165 days|331 days|51 days|
 |60 min|0.452125mAh|79 days|158 days|165 days|331 days|52 days|
 
+![alt text](http://i.imgur.com/tYz7lBM.png "Current Consumption")
+
 ![alt text](http://i.imgur.com/v7cFTNq.png "Battery Life")
 
 ![alt text](http://i.imgur.com/qOn5xVz.png "Operating Cost")
+
