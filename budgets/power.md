@@ -1,4 +1,6 @@
-Formulae:
+# Power Budget
+
+## Formulae
 ```
 battery_life    = battery_capacity / average_current
 
@@ -6,7 +8,7 @@ average_current = (busy_current * busy_period + idle_current * idle_period) / (b
                 = (8.10 * 1 + 0.45 * (interval_min * 60) - 1) / (interval_min * 60)
 ```
 
-Performance:
+## Performance
 ```
 busy_current = 8.10mA
 busy_period  = 1s
@@ -16,7 +18,7 @@ idle_period  = (interval_min * 60 - busy_period)
 battery_life varies about battery_capacity (refer to table above)
 ```
 
-# Power Budget
+## Data
 
 |Measurement Interval|Average Current|3 x AAA (4.5v, 860mAh)|6 x AAA (4.5v, 1720mAh)|3 x AA (4.5v, 1800mAh)|6 x AA (4.5v, 3600mAh)|1 x 9V (9v, 565mAh)|
 |--:|--:|--:|--:|--:|--:|--:|
@@ -28,6 +30,8 @@ battery_life varies about battery_capacity (refer to table above)
 |30 min|0.454250mAh|78 days|157 days|165 days|330 days|51 days|
 |45 min|0.452830mAh|79 days|158 days|165 days|331 days|51 days|
 |60 min|0.452125mAh|79 days|158 days|165 days|331 days|52 days|
+
+## Plots
 
 ![alt text](http://i.imgur.com/oXNU2Rt.png "Current Consumption")
 
