@@ -20,11 +20,6 @@ battery_life varies about battery_capacity (refer to table above)
 
 ## Data
 
-
-
-
-## Tables & Plots
-
 ### Current Consumption (mAh)
 
 Measurement<br>Interval<br>(minutes)|Average<br>Current<br>(mAh)
