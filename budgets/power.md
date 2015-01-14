@@ -52,6 +52,12 @@ Measurement<br>Interval<br>(minutes)|Profile A<br>6 x AA<br>(4.5v,3600mAh)|Profi
 
 ### Operating Cost (per Day)
 
+Battery|Cost per Unit
+---|--:
+AA|$0.67
+AAA|$0.71
+9V|$2.67
+
 Measurement<br>Interval<br>(minutes)|Profile A<br>6 x AA<br>(4.5v,3600mAh)|Profile B<br>3 x AA<br>(4.5v,1800mAh)|Profile C<br>6 x AAA<br>(4.5v,1720mAh)|Profile D<br>3 x AAA<br>(4.5v,860mAh)|Profile E<br>1 x 9V<br>(9v,565mAh)
 --:|--:|--:|--:|--:|--:
 1|$0.02 |$0.02 |$0.03 |$0.03 |$0.07 
