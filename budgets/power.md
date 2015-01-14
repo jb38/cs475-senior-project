@@ -18,7 +18,7 @@ battery_life varies about battery_capacity (refer to table above)
 
 # Power Budget
 
-|Reading Interval|Average Current|3 x AAA (4.5v, 860mAh)|6 x AAA (4.5v, 1720mAh)|3 x AA (4.5v, 1800mAh)|6 x AA (4.5v, 3600mAh)|1 x 9V (9v, 565mAh)|
+|Measurement Interval|Average Current|3 x AAA (4.5v, 860mAh)|6 x AAA (4.5v, 1720mAh)|3 x AA (4.5v, 1800mAh)|6 x AA (4.5v, 3600mAh)|1 x 9V (9v, 565mAh)|
 |--:|--:|--:|--:|--:|--:|--:|
 | 1 min|0.577500mAh|62 days|124 days|129 days|259 days|40 days|
 | 5 min|0.475500mAh|75 days|150 days|157 days|315 days|49 days|
