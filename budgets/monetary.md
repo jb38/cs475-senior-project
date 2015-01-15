@@ -1,4 +1,7 @@
 # Monetary Budget
+
+<em>This needs to be updated to reflect the most recent configuration (no Arduino)</em>
+
 ## Base System
 ### With Soldering
 |Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
