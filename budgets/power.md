@@ -1,5 +1,19 @@
 # Power Budget
 
+## Configuration
+
+This budget is based on the following component configuration.
+
+Component|Quantity|Brand|Model
+---|--:|---|---
+MCU|1|Atmel|ATMega328P
+Voltage Regulator|1|ST|L4931-3.3
+Battery|3|Duracell|AA (LR06)
+Temperature Sensor|1|Dallas Semiconductor|DS18B20
+Real-Time Clock|1|Macetech|ChronoDot (DS3231)
+
+This list ONLY contains components relevant to the reduction of power consumption, yielding a longer expectancy of battery life.
+
 ## Formulae
 ```
 battery_life    = battery_capacity / average_current
@@ -60,14 +74,13 @@ AAA|$0.71
 
 Measurement<br>Interval<br>(minutes)|Profile A<br>6 x AA<br>(4.5v,3600mAh)|Profile B<br>3 x AA<br>(4.5v,1800mAh)|Profile C<br>6 x AAA<br>(4.5v,1720mAh)|Profile D<br>3 x AAA<br>(4.5v,860mAh)|Profile E<br>1 x 9V<br>(9v,565mAh)
 --:|--:|--:|--:|--:|--:
-1|$0.02 |$0.02 |$0.03 |$0.03 |$0.07 
-5|$0.01 |$0.01 |$0.03 |$0.03 |$0.05 
-10|$0.01 |$0.01 |$0.03 |$0.03 |$0.05 
-15|$0.01 |$0.01 |$0.03 |$0.03 |$0.05 
-20|$0.01 |$0.01 |$0.03 |$0.03 |$0.05 
-30|$0.01 |$0.01 |$0.03 |$0.03 |$0.05 
-45|$0.01 |$0.01 |$0.03 |$0.03 |$0.05 
-60|$0.01 |$0.01 |$0.03 |$0.03 |$0.05 
+1|$0.02 |$0.02 |$0.03 |$0.03 |$0.07
+5|$0.01 |$0.01 |$0.03 |$0.03 |$0.05
+10|$0.01 |$0.01 |$0.03 |$0.03 |$0.05
+15|$0.01 |$0.01 |$0.03 |$0.03 |$0.05
+20|$0.01 |$0.01 |$0.03 |$0.03 |$0.05
+30|$0.01 |$0.01 |$0.03 |$0.03 |$0.05
+45|$0.01 |$0.01 |$0.03 |$0.03 |$0.05
+60|$0.01 |$0.01 |$0.03 |$0.03 |$0.05
 
 ![alt text](http://i.imgur.com/qOn5xVz.png "Operating Cost")
-
