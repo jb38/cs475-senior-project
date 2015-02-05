@@ -1,7 +1,5 @@
 # Monetary Budget
 
-<em>This needs to be updated to reflect the most recent configuration (no Arduino)</em>
-
 ## RFduino-based System (Bluetooth Low Energy)
 Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link
 ---|--:|--:|--:|--:|--:|---
