@@ -2,44 +2,19 @@
 
 <em>This needs to be updated to reflect the most recent configuration (no Arduino)</em>
 
-## Base System
-### With Soldering
-|Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
-|---|--:|--:|--:|--:|--:|---|
-|Arduino Uno R3|1|$15.95|$15.95|1|$15.95|http://www.amazon.com/dp/B00CW3R0BA|
-|Data-logging Shield w/ RTC|1|$17.96|$17.96|1|$17.96|http://www.adafruit.com/products/1141|
-|Waterproof Temperature Sensor|5|$16.95|$3.39|1|$3.39|http://www.amazon.com/dp/B00KUNKR3M|
-|Power Cable (9v to Arduino)|10|$9.89|$0.99|1|$0.99|http://www.amazon.com/dp/B00BVVHCKI|
-|3-pin Terminal Block Connector|20|$5.57|$0.28|1|$0.28|http://www.amazon.com/dp/B00NWFJ8O4|
-|Enclosure|1|$12.99|$12.99|1|$12.99|http://www.coleman.com/product/watertight-container-small/2000016543|
-|Rubber Grommet|100|$5.38|$0.05|1|$0.05|http://www.grainger.com/product/Grommet-3MPN7|
-|9v Battery|12|$16.10|$1.34|1|$1.34|http://www.amazon.com/dp/B002UGVWA4|
-|SD Card|10|$42.95|$4.30|1|$4.30|http://www.amazon.com/dp/B00JYE81M2|
-|Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
-|||||**Cost per**|**$57.72**|_with Bluetooth: $63.60_|
-
-### Without Soldering
-|Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
-|---|--:|--:|--:|--:|--:|---|
-|Arduino Uno R3|1|$15.95|$15.95|1|$15.95|http://www.amazon.com/dp/B00CW3R0BA|
-|Waterproof Temperature Sensor|5|$16.95|$3.39|1|$3.39|http://www.amazon.com/dp/B00KUNKR3M|
-|SD Card Shield|1|$13.90|$13.90|1|$13.90|http://www.seeedstudio.com/depot/sd-card-shield-v40-p-1381.html|
-|RTC Module|1|$17.50|$17.50|1|$17.50|http://www.adafruit.com/product/255|
-|Tiny Breadboard|10|$35.60|$3.56|1|$3.56|https://www.sparkfun.com/products/12047|
-|Power Cable (9v to Arduino)|10|$9.89|$0.99|1|$0.99|http://www.amazon.com/dp/B00BVVHCKI|
-|3-pin Terminal Block Connector|20|$5.57|$0.28|1|$0.28|http://www.amazon.com/dp/B00NWFJ8O4|
-|Enclosure|1|$12.99|$12.99|1|$12.99|http://www.coleman.com/product/watertight-container-small/2000016543|
-|Rubber Grommet|100|$5.38|$0.05|1|$0.05|http://www.grainger.com/product/Grommet-3MPN7|
-|9v Battery|12|$16.10|$1.34|1|$1.34|http://www.amazon.com/dp/B002UGVWA4|
-|SD Card|10|$42.95|$4.30|1|$4.30|http://www.amazon.com/dp/B00JYE81M2|
-|Jumper Wires (M/M)|40|$3.95|$0.10|10|$0.99|http://www.adafruit.com/products/758|
-|Sponge|96|$45.06|$0.47|1|$0.47|http://www.amazon.com/dp/B001E6J39I|
-|||||**Cost per**|**$75.70**|_with Bluetooth: $81.59_|
-
-## Add-ons
-### Bluetooth
-|Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link|
-|---|--:|--:|--:|--:|--:|---|
-|Bluetooth Transceiver Module|1|$5.49|$5.49|1|$5.49|http://www.newegg.com/Product/Product.aspx?Item=9SIA2C50Y31529|
-|Jumper Wires (M/F)|40|$3.95|$0.10|4|$0.40|https://www.adafruit.com/products/826|
-|||||**Cost per**|**$5.89**||
+## RFduino-based System (Bluetooth Low Energy)
+Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link
+---|--:|--:|--:|--:|--:|---
+RFduino (RFD22102)|1|$25.99|$25.99|1|$25.99|http://www.mouser.com/ProductDetail/RF-Digital/RFD22102
+Voltage Regulator (L4931)|1|$0.95|$0.95|1|$0.95|https://www.adafruit.com/products/2166
+Temperature Sensor (DS18B20)|1|$9.95|$9.95|1|$9.95|https://www.sparkfun.com/products/11050
+ChronoDot RTC (DS3231)|1|$17.50|$17.50|1|$17.50|http://www.adafruit.com/product/255
+SD Card (>1GB)|1|$3.29|$3.29|1|$3.29|http://www.amazon.com/SanDisk-Class-Memory-SDSDB-004G-B35-Change/dp/B000WQKOQM
+Capacitor (10uF)|10|$1.95|$0.195|2|$0.39|https://www.adafruit.com/product/2195
+Resistor (4.7K)|5|$0.10|$0.02|1|$0.02|http://www.mouser.com/ProductDetail/Ohmite/OK4725E-R52/
+Breadboard, Half-size|1|$5.00|$5.00|1|$5.00|http://www.adafruit.com/products/64
+Jumper Wires|40|$3.95|$0.09875|20|$1.98|http://www.adafruit.com/products/825
+Enclosure|1|$12.99|$12.99|1|$12.99|http://www.coleman.com/product/watertight-container-small/2000016543
+Rubber Grommet|100|$5.38|$0.05|1|$0.05|http://www.grainger.com/product/Grommet-3MPN7
+3-pin Terminal Block Connector|20|$5.57|$0.28|1|$0.28|http://www.amazon.com/dp/B00NWFJ8O4
+**Total**|||||**$78.39**|
