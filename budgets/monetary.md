@@ -1,6 +1,6 @@
 # Monetary Budget
 
-## RFduino-based System (Bluetooth Low Energy)
+## RFduino-based System (Bluetooth LE)
 Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link
 ---|--:|--:|--:|--:|--:|---
 RFduino (RFD22102)|10|$209.90|$20.99|1|$20.99|http://www.mouser.com/ProductDetail/RF-Digital/RFD22102
