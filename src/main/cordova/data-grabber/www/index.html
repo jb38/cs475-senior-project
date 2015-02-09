@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <title>Hood DataGrabber</title>
+
+        <link rel="stylesheet" type="text/css" href="ratchet/css/ratchet.min.css" />
+        <link rel="stylesheet" type="text/css" href="ratchet/css/ratchet-theme-android.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+    </head>
+    <body>
+
+        <!-- BEGIN INDEX VIEW -->
+
+        <header class="bar bar-nav">
+          <a href="#aboutmodal" class="icon icon-info pull-right"></a>
+          <h1 class="title">
+            <img src="img/hood48.png" class="app-logo" />
+            DataGrabber
+          </h1>
+        </header>
+
+        <div class="content">
+          <div class="card">
+            <ul class="table-view" id="logger-list">
+              <li class="table-view-cell table-view-divider">
+                DataLoggers
+                <span class="scanning">
+                  Scanning&hellip;
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bar bar-standard bar-footer">
+          <button class="btn btn-block" id="refresh-list-button">
+            Scan
+          </button>
+        </div>
+
+        <!-- END INDEX VIEW -->
+
+        <!-- BEGIN ABOUT MODAL -->
+
+        <div id="aboutmodal" class="modal">
+          <header class="bar bar-nav">
+            <a class="icon icon-close pull-right" href="#aboutmodal"></a>
+            <h1 class="title">
+              <img src="img/hood48.png" class="app-logo" />
+              About
+            </h1>
+          </header>
+          <div class="content">
+            <div class="content-padded">
+              <p>
+                The Hood DataGrabber application searches for Bluetooth devices
+                that were built to log temperature data for the Environmental
+                Science department at Hood College.
+              </p>
+              <p>
+                Upon the discovery of such devices, the user has the option to
+                download, view, and submit the data to Hood College web servers
+                for further analysis.
+              </p>
+              <p>
+                &nbsp;
+              </p>
+              <p>
+                For more information, contact:
+              </p>
+              <p>
+                Hood College<br>
+                401 Rosemont Ave<br>
+                Frederick, MD 21701<br>
+                (301) 663-3131
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- END ABOUT MODAL -->
+
+        <!-- BEGIN DEVICE MANAGEMENT MODAL -->
+
+        <div id="devicemodal" class="modal">
+          <header class="bar bar-nav">
+            <a class="icon icon-close pull-right" href="#devicemodal"></a>
+            <h1 class="title">
+              <img src="img/hood48.png" class="app-logo" />
+              DataLogger Management
+            </h1>
+          </header>
+          <div class="content">
+
+
+            <div class="card">
+              <ul class="table-view" id="logger-list">
+                <li class="table-view-cell table-view-divider">
+                  Device Information
+                </li>
+                <li class="table-view-cell">
+                  <span class="field-title">Name</span>
+                  <span data-model-device="name"></span>
+                </li>
+                <li class="table-view-cell">
+                  <span class="field-title">RSSI</span>
+                  <span data-model-device="rssi"></span>
+                </li>
+                <li class="table-view-cell">
+                  <span class="field-title">Advertising</span>
+                  <span data-model-device="advertising"></span>
+                </li>
+                <li class="table-view-cell">
+                  <span class="field-title">UUID</span>
+                  <span data-model-device="uuid"></span>
+                </li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+
+        <!-- END DEVICE MANAGEMENT MODAL -->
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="jquery/js/jquery.min.js"></script>
+        <script type="text/javascript" src="ratchet/js/ratchet.min.js"></script>
+        <!-- script type="text/javascript" src="js/index.js"></script -->
+        <script type="text/javascript">
+          var app = {
+
+            pollLength: 5,
+
+            initialize: function() {
+              this.bindEvents();
+            },
+            // Bind Event Listeners
+            //
+            // Bind any events that are required on startup. Common events are:
+            // 'load', 'deviceready', 'offline', and 'online'.
+            bindEvents: function() {
+
+              document.addEventListener('online', this.onDeviceOnline, false);
+              document.addEventListener('offline', this.onDeviceOffline, false);
+              document.addEventListener('deviceready', this.onDeviceReady, false);
+              document.addEventListener('resume', this.onDeviceReady, false);
+            },
+
+            onDeviceOnline: function() {
+
+            },
+
+            onDeviceOffline: function() {
+
+            },
+
+            onDeviceReady: function() {
+
+              $("#refresh-list-button").on("click", app.findRFduinoDevices);
+
+              app.findRFduinoDevices();
+            },
+
+            onDeviceResume: function() {
+
+            },
+
+            _onScanStart: function() {
+
+              $("#logger-list .scanning").css("opacity", 1);
+              $("#refresh-list-button").prop("disabled", true);
+            },
+
+            _onScanEnd: function() {
+
+              $("#logger-list .scanning").css("opacity", 0);
+              $("#refresh-list-button").prop("disabled", null);
+            },
+
+            findRFduinoDevices: function() {
+
+              app._onScanStart();
+              setTimeout(app._onScanEnd, app.pollLength * 1000);
+
+              $("#logger-list .device").remove();
+              $("#logger-list .error").remove();
+
+              rfduino.isEnabled(function() {
+                rfduino.discover(
+                  app.pollLength,
+                  function(device) {
+
+                    // create the item in the list for the device
+                    $("#logger-list").append(
+                        "<li class='table-view-cell device'>" + device.name +
+                        " <button data-device-uuid='" + device.uuid +
+                        "' class='btn manage'>Manage</button></li>");
+
+                    // bind to the button's click event
+                    $("button[data-device-uuid='" + device.uuid + "']", "#logger-list").on("click", function() {
+
+                      // fill in any model-specific node text
+                      for (var prop in device) {
+                        if (device.hasOwnProperty(prop)) {
+                          $("[data-model-device='" + prop + "']", "#devicemodal").text(device[prop]);
+                        }
+                      }
+
+                      // show the modal
+                      $("#devicemodal").addClass("active");
+/*
+                      console.log(JSON.stringify(navigator));
+
+                      Camera.getPicture(
+                        function(imageData) {
+                          $("#devicemodal content").append(
+                            "<img src='data:image/jpeg;base64," + imageData +
+                            "' alt='picture' />";
+                        });,
+                        function() {
+
+                        }, {
+                          quality : 75,
+                          destinationType : Camera.DestinationType.DATA_URL,
+                          sourceType : Camera.PictureSourceType.CAMERA,
+                          allowEdit : true,
+                          encodingType: Camera.EncodingType.JPEG,
+                          targetWidth: 100,
+                          targetHeight: 100,
+                          popoverOptions: CameraPopoverOptions,
+                          saveToPhotoAlbum: false
+                        });
+*/
+                      // TODO fire connect and populate data
+                      /*
+                      rfduino.connect(
+                        device.uuid,
+                        function() {
+
+                        },
+                        function(reason) {
+
+                        });
+                      */
+                      /*
+                      var data = new ArrayBuffer(3);
+                      data[0] = 0xFF;
+                      data[1] = 0x00;
+                      data[2] = 0x17;
+                      rfduino.write(data.buffer, success, failure);
+                      */
+                    });
+                  });
+              }, function() {
+                $("#logger-list").append(
+                  "<li class='table-view-cell error'>Bluetooth is not enabled</li>");
+                  app._onScanEnd();
+              });
+            }
+          };
+          app.initialize();
+        </script>
+    </body>
+</html>

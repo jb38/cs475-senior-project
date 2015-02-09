@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="edu.hood.blaney" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>DataGrabber</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="jb38@hood.edu" href="http://pluto.hood.edu/~jblaney/">
+        Jim Blaney
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <!-- preference name="Fullscreen" value="true" / -->
+    <preference name="Orientation" value="portrait" />
+    <preference name="BackgroundColor" value="0xff2e608b"/>
+    <icon src="res/hood96.png" />
+    <icon src="res/hood96.png" width="96" height="96" density="xhdpi" />
+    <icon src="res/hood72.png" width="72" height="72" density="hdpi" />
+    <icon src="res/hood48.png" width="48" height="48" density="mdpi" />
+    <icon src="res/hood36.png" width="36" height="36" density="ldpi" />
+    <!--
+    <splash src="res/splash-port-hdpi.png" density="port-hdpi"/>
+    <splash src="res/splash-port-ldpi.png" density="port-ldpi"/>
+    <splash src="res/splash-port-mdpi.png" density="port-mdpi"/>
+    <splash src="res/splash-port-xhdpi.png" density="port-xhdpi"/>
+    -->
+</widget>
