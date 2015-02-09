@@ -8,7 +8,7 @@
 #include <SPI.h>
 #include <SD.h>
 
-#define LOGGING_FREQ_SECONDS   10
+#define LOGGING_FREQ_SECONDS   60
 
 #define RTC_POWER_PIN          A3
 RTC_DS3231 RTC;
@@ -129,8 +129,17 @@ void setup(void) {
   // Configure digital output connected to rtc module.
   pinMode(RTC_POWER_PIN, OUTPUT);
   digitalWrite(RTC_POWER_PIN, HIGH);
+
   Wire.begin(); // I2C init as master
   RTC.begin();
+  
+  DateTime now = RTC.now();
+  DateTime compiled = DateTime(__DATE__, __TIME__);
+  if (now.unixtime() < compiled.unixtime()) {
+    //Serial.println("RTC is older than compile time!  Updating");
+    RTC.adjust(DateTime(__DATE__, __TIME__));
+  }
+
   digitalWrite(RTC_POWER_PIN, LOW);
 
   pinMode(10, OUTPUT);
