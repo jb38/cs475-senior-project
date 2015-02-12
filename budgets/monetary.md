@@ -15,4 +15,6 @@ Jumper Wires|40|$3.95|$0.09875|20|$1.98|http://www.adafruit.com/products/825
 Enclosure|1|$8.00|$8.00|1|$8.00|http://www.kmart.com/coleman-watertight-container/p-089W004711075001P?prdNo=13
 Rubber Grommet|100|$5.38|$0.05|1|$0.05|http://www.grainger.com/product/Grommet-3MPN7
 3-pin Terminal Block Connector|20|$5.57|$0.28|1|$0.28|http://www.amazon.com/dp/B00NWFJ8O4
-**Total**|||||**$65.16**|
+Battery Compartment|1|$1.76|$1.76|1|$1.76|http://www.adafruit.com/products/727
+CPVC Coupling|1|$0.28|$0.28|1|$0.28|http://www.lowes.com/pd_23762-322-50107N_4294765342__?productId=3132993
+**Total**|||||**$67.20**|
