@@ -3,7 +3,7 @@
 ## RFduino-based System (Bluetooth LE) w/ External Temperature Sensor
 Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link
 ---|--:|--:|--:|--:|--:|---
-RFduino (RFD22102)|10|$209.90|$20.99|1|$20.99|http://www.mouser.com/ProductDetail/RF-Digital/RFD22102
+RFduino (RFD22102)|10|$209.90|$20.99|1|$20.99|http://www.mouser.com/ProductDetail/RF-Digital-Wireless/RFD22102
 Voltage Regulator (L4931)|1|$0.95|$0.95|1|$0.95|https://www.adafruit.com/products/2166
 Temperature Sensor (DS18B20)|10|$89.60|$8.96|1|$8.96|https://www.sparkfun.com/products/11050
 ChronoDot RTC (DS3231)|10|$157.50|$15.75|1|$15.75|http://www.adafruit.com/product/255
@@ -22,7 +22,7 @@ CPVC Coupling|1|$0.28|$0.28|1|$0.28|http://www.lowes.com/pd_23762-322-50107N_429
 ## RFduino-based System (Bluetooth LE) w/ Internal Temperature Sensor
 Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link
 ---|--:|--:|--:|--:|--:|---
-RFduino (RFD22102)|10|$209.90|$20.99|1|$20.99|http://www.mouser.com/ProductDetail/RF-Digital/RFD22102
+RFduino (RFD22102)|10|$209.90|$20.99|1|$20.99|http://www.mouser.com/ProductDetail/RF-Digital-Wireless/RFD22102
 Voltage Regulator (L4931)|1|$0.95|$0.95|1|$0.95|https://www.adafruit.com/products/2166
 Temperature Sensor (MCP9808)|10|$44.60|$4.46|1|$4.46|http://www.adafruit.com/product/1782
 ChronoDot RTC (DS3231)|10|$157.50|$15.75|1|$15.75|http://www.adafruit.com/product/255
