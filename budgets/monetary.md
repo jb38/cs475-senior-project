@@ -15,9 +15,9 @@ Jumper Wires|40|$3.95|$0.09875|20|$1.98|http://www.adafruit.com/products/825
 Enclosure|1|$8.00|$8.00|1|$8.00|http://www.kmart.com/coleman-watertight-container/p-089W004711075001P?prdNo=13
 Rubber Grommet|100|$5.38|$0.05|1|$0.05|http://www.grainger.com/product/Grommet-3MPN7
 3-pin Terminal Block Connector|20|$5.57|$0.28|1|$0.28|http://www.amazon.com/dp/B00NWFJ8O4
-Battery Compartment|1|$1.76|$1.76|1|$1.76|http://www.adafruit.com/products/727
+Battery Compartment|1|$1.95|$1.95|1|$1.95|https://www.sparkfun.com/products/10891
 CPVC Coupling|1|$0.28|$0.28|1|$0.28|http://www.lowes.com/pd_23762-322-50107N_4294765342__?productId=3132993
-**Total**|||||**$68.86**|
+**Total**|||||**$69.05**|
 
 ## RFduino-based System (Bluetooth LE) w/ Internal Temperature Sensor
 Product|Qty|Price (bulk)|Price Ea|Req’d Qty|Total|Link
@@ -31,5 +31,5 @@ Capacitor (10uF)|10|$1.95|$0.195|2|$0.39|https://www.adafruit.com/product/2195
 Breadboard, Half-size|10|$45.00|$4.50|1|$4.50|http://www.adafruit.com/products/64
 Jumper Wires|40|$3.95|$0.09875|20|$1.98|http://www.adafruit.com/products/825
 Enclosure|1|$8.00|$8.00|1|$8.00|http://www.kmart.com/coleman-watertight-container/p-089W004711075001P?prdNo=13
-Battery Compartment|1|$1.76|$1.76|1|$1.76|http://www.adafruit.com/products/727
-**Total**|||||**$63.73**|
+Battery Compartment|1|$1.95|$1.95|1|$1.95|https://www.sparkfun.com/products/10891
+**Total**|||||**$63.92**|
