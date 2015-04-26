@@ -8,13 +8,20 @@
 #include <SPI.h>
 #include <SD.h>
 
-#define LOGGING_FREQ_SECONDS   60
+#include <Adafruit_MCP9808.h>
+
+#define LOGGING_FREQ_SECONDS   5
 
 #define RTC_POWER_PIN          A3
 RTC_DS3231 RTC;
 
 #define TEMP_SIGNAL_PIN        8
+#define TEMP2_SIGNAL_PIN       6
+
 OneWire ds(TEMP_SIGNAL_PIN);
+OneWire ds2(TEMP2_SIGNAL_PIN);
+
+Adafruit_MCP9808 temp3 = Adafruit_MCP9808();
 
 #define SD_CARD_SELECT         9
 String stationId;
@@ -26,10 +33,14 @@ ISR(WDT_vect) { Sleepy::watchdogEvent(); }
 void logSensorReading() {
   
   DateTime now = getTime();
-  float temperature = getTemp();
+  float temperature2 = getTemp(ds2);
+  float temperature = getTemp(ds);
+  float temperature3 = temp3.readTempC();
+  
+  
   
   File file;
-  if (file = SD.open("data.txt", FILE_WRITE)) {
+  if (file = SD.open("data2.txt", FILE_WRITE)) {
     file.print(now.year(), DEC);
     file.print('-');
     file.print(now.month(), DEC);
@@ -41,13 +52,17 @@ void logSensorReading() {
     file.print(now.minute(), DEC);
     file.print(':');
     file.print(now.second(), DEC);
-    file.print('Z');
     file.print('\t');
-    file.println(temperature, 3);
+    file.print(temperature, 3);
+    file.print('\t');
+    file.print(temperature2, 3);        
+    file.print('\t');
+    file.println(temperature3, 3);
     file.close(); 
   }
 
   // Connect to the server and send the reading.
+  
   Serial.print(now.year(), DEC);
   Serial.print('-');
   Serial.print(now.month(), DEC);
@@ -59,12 +74,15 @@ void logSensorReading() {
   Serial.print(now.minute(), DEC);
   Serial.print(':');
   Serial.print(now.second(), DEC);
-  Serial.print('Z');
   Serial.print('\t');
-  Serial.println(temperature, 3);
+  Serial.print(temperature, 3);
+  Serial.print('\t');
+  Serial.print(temperature2, 3);        
+  Serial.print('\t');
+  Serial.println(temperature3, 3);
 
   // Note that if you're sending a lot of data you
-  // might need to tweak the delay here so the CC3000 has
+  // might need to tweak the delay here so the Serial has
   // time to finish sending all the data before shutdown.
   delay(100);
 }
@@ -76,14 +94,14 @@ DateTime getTime() {
   return now;
 }
 
-float getTemp() { //returns the temperature from one DS18S20 in DEG Celsius
+float getTemp(OneWire d) { //returns the temperature from one DS18S20 in DEG Celsius
 
   byte data[12];
   byte addr[8];
 
-  if (!ds.search(addr)) {
+  if (!d.search(addr)) {
     //no more sensors on chain, reset search
-    ds.reset_search();
+    d.reset_search();
     return -1000;
   }
 
@@ -97,21 +115,21 @@ float getTemp() { //returns the temperature from one DS18S20 in DEG Celsius
     return -1000;
   }
 
-  ds.reset();
-  ds.select(addr);
-  ds.write(0x44, 1); // start conversion, with parasite power on at the end
+  d.reset();
+  d.select(addr);
+  d.write(0x44, 1); // start conversion, with parasite power on at the end
 
   delay(750); // required wait time for parasitic power
 
   byte present = ds.reset();
-  ds.select(addr);
-  ds.write(0xBE); // Read Scratchpad
+  d.select(addr);
+  d.write(0xBE); // Read Scratchpad
 
   for (int i = 0; i < 9; i++) { // we need 9 bytes
-    data[i] = ds.read();
+    data[i] = d.read();
   }
 
-  ds.reset_search();
+  d.reset_search();
 
   byte MSB = data[1];
   byte LSB = data[0];
@@ -133,6 +151,8 @@ void setup(void) {
   Wire.begin(); // I2C init as master
   RTC.begin();
   
+  temp3.begin();
+  
   DateTime now = RTC.now();
   DateTime compiled = DateTime(__DATE__, __TIME__);
   if (now.unixtime() < compiled.unixtime()) {
@@ -150,10 +170,16 @@ void setup(void) {
 }
 
 void loop(void) {
+
+  long start = millis();
   
   // Log the sensor reading
   logSensorReading();
+  
+  long finish = millis();
 
-  Sleepy::loseSomeTime(LOGGING_FREQ_SECONDS * 1000);
+  delay(LOGGING_FREQ_SECONDS * 1000 - (finish - start));
+
+  //Sleepy::loseSomeTime(LOGGING_FREQ_SECONDS * 1000 - (finish - start));
 }
 
