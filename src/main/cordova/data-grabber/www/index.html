@@ -5,12 +5,12 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
 
-        <title>Hood DataGrabber</title>
+        <title>Project BOOST Device Manager</title>
 
         <link rel="stylesheet" type="text/css" href="ratchet/css/ratchet.min.css" />
-        <link rel="stylesheet" type="text/css" href="ratchet/css/ratchet-theme-android.min.css" />
+        <!-- link rel="stylesheet" type="text/css" href="ratchet/css/ratchet-theme-android.min.css" / -->
         <link rel="stylesheet" type="text/css" href="css/index.css" />
     </head>
     <body>
@@ -21,7 +21,7 @@
           <a href="#aboutmodal" class="icon icon-info pull-right"></a>
           <h1 class="title">
             <img src="img/hood48.png" class="app-logo" />
-            DataGrabber
+            Project BOOST Device Manager
           </h1>
         </header>
 
@@ -29,7 +29,7 @@
           <div class="card">
             <ul class="table-view" id="logger-list">
               <li class="table-view-cell table-view-divider">
-                DataLoggers
+                Devices
                 <span class="scanning">
                   Scanning&hellip;
                 </span>
@@ -90,44 +90,66 @@
 
         <div id="devicemodal" class="modal">
           <header class="bar bar-nav">
-            <a class="icon icon-close pull-right" href="#devicemodal"></a>
+            <!-- a class="icon icon-close pull-right" href="#devicemodal"></a -->
             <h1 class="title">
               <img src="img/hood48.png" class="app-logo" />
-              DataLogger Management
+              Project BOOST Device
             </h1>
           </header>
           <div class="content">
-
 
             <div class="card">
               <ul class="table-view" id="logger-list">
                 <li class="table-view-cell table-view-divider">
                   Device Information
+                  <button id="refresh-device-data" class="btn">Refresh</button>
                 </li>
                 <li class="table-view-cell">
                   <span class="field-title">Name</span>
                   <span data-model-device="name"></span>
                 </li>
-                <li class="table-view-cell">
+                <!-- li class="table-view-cell">
                   <span class="field-title">RSSI</span>
                   <span data-model-device="rssi"></span>
-                </li>
-                <li class="table-view-cell">
+                </li -->
+                <!-- li class="table-view-cell">
                   <span class="field-title">Advertising</span>
                   <span data-model-device="advertising"></span>
-                </li>
-                <li class="table-view-cell">
+                </li -->
+                <!-- li class="table-view-cell">
                   <span class="field-title">UUID</span>
                   <span data-model-device="uuid"></span>
+                </li -->
+                <li class="table-view-cell">
+                  <span class="field-title">Battery</span>
+                  <span id="device-battery"></span>
+                </li>
+                <li class="table-view-cell">
+                  <span class="field-title">Temperature&nbsp;</span>
+                  <span id="device-temperature"></span>
+                </li>
+                <li class="table-view-cell">
+                  <span class="field-title">Time</span>
+                  <span id="device-time"></span>
+                  <button id="set-device-time" class="btn">Set</button>
                 </li>
               </ul>
+            </div>
+
+            <div class="btn-container">
+              <button id="get-device-data" class="btn btn-block btn-hood">Download Data</button>
+            </div>
+
+            <div class="bar bar-standard bar-footer">
+              <button class="btn btn-block" id="disconnect-button">
+                Disconnect
+              </button>
             </div>
 
           </div>
         </div>
 
         <!-- END DEVICE MANAGEMENT MODAL -->
-
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="jquery/js/jquery.min.js"></script>
         <script type="text/javascript" src="ratchet/js/ratchet.min.js"></script>

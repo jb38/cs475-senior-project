@@ -25,11 +25,15 @@
 }
 
 h1.title {
-  color: #2F5E8C;
+  color: #2F5E8C !important;
+}
+
+.bar * {
+  color: #2F5E8C !important;
 }
 
 .bar a {
-  color: #2F5E8C;
+  color: #2F5E8C !important;
 }
 
 .app-logo {
@@ -53,4 +57,35 @@ h1.title {
   width: 40%;
   display: inline-block;
   font-weight: bold;
+}
+
+.battery-good {
+  color: #228B22;
+}
+
+.battery-okay {
+  color: #FF8C00;
+}
+
+.battery-bad {
+  font-weight: bold;
+  color: #8B0000;
+}
+
+.btn-container {
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn-hood {
+  border: 0 !important;
+  color: white !important;
+  background-color: #2F5E8C !important;
+}
+
+#device-time,
+#device-temperature {
+  font-size: 0.7em;
 }
