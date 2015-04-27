@@ -41,7 +41,7 @@ SOFTWARE.
 /**
  * configuration parameters
  */
-#define LOGGING_FREQUENCY_MINUTES               1
+#define LOGGING_FREQUENCY_MINUTES              10
 #define BLE_REMAINS_ON_AFTER_POWER_ON_MINUTES  15
 #define TIME_ZONE_OFFSET_HOURS                 -4
 #define I2C_BUS_POWER                           2
